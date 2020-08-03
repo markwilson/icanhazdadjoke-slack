@@ -2,7 +2,7 @@ name: Daily dad joke
 
 on:
   schedule:
-    - cron: "0 9 * * 1-5"
+    - cron: "0 14 * * 1-5"
 
 jobs:
   joke:
