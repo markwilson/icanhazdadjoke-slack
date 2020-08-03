@@ -1,0 +1,21 @@
+name: Daily dad joke
+
+on:
+  schedule:
+    - cron: "0 9 * * 1-5"
+
+jobs:
+  joke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout the repo
+      - uses: actions/setup-node@v1
+        name: Setup node
+        with:
+          node-version: "12"
+      - run: yarn install
+        name: Install dependencies
+      - run: yarn joke
+        env:
+          SLACK_URL: ${{ secrets.SLACK_URL }}

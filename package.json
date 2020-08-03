@@ -1,0 +1,10 @@
+{
+  "name": "icanhazdadjoke-slack",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2"
+  },
+  "scripts": {
+    "joke": "node main.js"
+  }
+}
