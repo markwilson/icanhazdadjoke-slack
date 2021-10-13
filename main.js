@@ -10,7 +10,9 @@ axios
     },
   })
   .then(({ data }) => {
-    axios.post(slackUrl, data);
+    axios.post(slackUrl, data).catch((error) => {
+      console.error(error);
+    });
   })
   .catch((error) => {
     console.error(error);
